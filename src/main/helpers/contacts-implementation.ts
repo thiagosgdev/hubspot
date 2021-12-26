@@ -23,8 +23,6 @@ export class ContactsImplementation {
         
         await this.dbAddContactsList.addContacts(listId, contactsEmails)
 
-        console.log(`List LOG: ${listLog}`)
-
         return listLog;
     }
 }

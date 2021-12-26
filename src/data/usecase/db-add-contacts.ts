@@ -4,8 +4,6 @@ export class DbAddContacts {
     async add(contacts: Object[]){
         await hubSpotConnection.contacts.createOrUpdateBatch(contacts);
 
-        console.log(`Add Batch Contacts Done`)
-
     }
 }
 

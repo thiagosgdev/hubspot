@@ -12,8 +12,6 @@ export class DbCreateList {
         
         const { listId } = await hubSpotConnection.lists.create({ name: listName });
 
-        console.log(`Lista criada. Id: ${listId} name: ${listName}`)
-
         return { listId, listName};
     }
 }

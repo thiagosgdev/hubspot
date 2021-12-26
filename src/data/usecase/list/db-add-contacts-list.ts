@@ -26,10 +26,7 @@ export class DbAddContactsList {
         const contactsInfo = await this.getContactsInfo(contactsEmails);
         const contactsVids = await this.getVidContacts(contactsInfo);
 
-        console.log(`Contatos adicionados a lista. Id da Lista: ${listId} Vids: ${contactsVids} E-mails: contactsEmails`)
-
         const response = await hubSpotConnection.lists.addContacts(listId, {vids: contactsVids, emails: contactsEmails})
 
-        console.log(`Response from AddContacts to list: ${response}`)
     }
 }

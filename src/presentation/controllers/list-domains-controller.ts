@@ -13,8 +13,7 @@ export class ListDomainsController {
         const options = { 
             count: 100
         }
-        console.log("LIST ID: "+logs.listId)
-        
+
         const { contacts } = await hubSpotConnection.apiRequest({
             method: 'GET',
             path: `/contacts/v1/lists/${logs.listId}/contacts/all`,
